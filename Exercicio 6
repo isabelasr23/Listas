@@ -10,7 +10,6 @@ public class Exercicio6 {
                 "N - noturno\n ");
 
         char turno = scanner.next().charAt(0);
-        //turno = scanner.next().charAt(0);
         turno = Character.toUpperCase(turno);
 
         switch (turno){
