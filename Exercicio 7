@@ -27,7 +27,6 @@ public class Exercicio7 {
     }
 
     public static void main(String[] args){
-
         Scanner scanner = new Scanner(System.in);
 
         int contador = 0;
@@ -40,7 +39,6 @@ public class Exercicio7 {
 
             contador = Resposta(resposta,contador);
         }
-
         if(contador == 2){
             System.out.println("Suspeita");
         }else if((contador == 3) || (contador == 4)){
@@ -49,6 +47,6 @@ public class Exercicio7 {
             System.out.println("Assassino");
         }else{
             System.out.println("Inocente");
-        }
+        } 
     }
 }
