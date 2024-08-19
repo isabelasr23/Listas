@@ -11,8 +11,6 @@ public class DesafioExercicio5 {
         for(int i = 1; i <= numero; i++){
             if ((numero % i) == 0){
                 contador++;
-            }else{
-                continue;
             }
         }
 
