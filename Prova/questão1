@@ -18,7 +18,74 @@ public class questao1 {
     }
 }
 
+_______________________________________________________________________________
+QUESTAO 2
 
+
+
+import java.util.Scanner;
+
+public class Questão2{
+    public static void main(String[] args){
+        String nomeCadastro="", nomeEntrar="", senhaCadastro="", senhaEntrar="";
+
+
+        Scanner scanner = new Scanner(System.in);
+
+
+        int opcao, a = 0;
+        while (a >= 0){
+            System.out.println("Digite a opção desejada:\n1-Cadastrar\n2-Entrar\n3- sair");
+            opcao = scanner.nextInt();
+
+            while(a >=0 ){
+                while(a == 0){
+                    if(opcao == 1 && a ==0){
+                        System.out.println("Digite o sei usuári0: ");
+                        nomeCadastro = scanner.next();
+                        System.out.println("digite sua senha: ");
+                        senhaCadastro = scanner.next();
+                        a++;
+                    }else{
+                        System.out.println("Nao existe cadastro ainda");
+                        System.out.println("Digite a opção desejada:\n1-Cadastrar\n2-Entrar\n3- sair");
+                        opcao = scanner.nextInt();
+                        continue;
+                    }
+                }
+                System.out.println("Digite a opção desejada:\n1-Cadastrar\n2-Entrar\n3- sair");
+                opcao = scanner.nextInt();
+                if(opcao == 2){
+                    System.out.println("Digite seu usuario: ");
+                    nomeEntrar = scanner.next();
+                    System.out.println("digite a senha: ");
+                    senhaEntrar = scanner.next();
+
+                    while (!(nomeCadastro.equals(nomeEntrar))){
+                        System.out.println("Digite seu usuario: ");
+                        nomeEntrar = scanner.next();
+                    }
+                    while(!(senhaCadastro.equals(senhaEntrar))){
+                        System.out.println("digite a senha: ");
+                        senhaEntrar = scanner.next();
+                    }
+
+                    System.out.println("Entrou" +
+                            "\nDigite 3 para sair");
+                    opcao = scanner.nextInt();
+                    if (opcao == 3){
+                        break;
+                    }
+                } else if (opcao == 3) {
+                    break;
+                    
+                }
+
+
+            }
+        }
+    }
+}
 
 
 __________________________________________________________________________________
