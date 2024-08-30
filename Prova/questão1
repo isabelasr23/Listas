@@ -1,0 +1,56 @@
+________________________________________________________________________________
+QUESTAO 1
+import java.util.Scanner;
+
+public class questao1 {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+
+        int numero;
+
+        System.out.print("Digite um numero:");
+        numero = scanner.nextInt();
+
+        for(int i = 1; i <= 10; i++){
+            System.out.println(numero+" x "+i+ " = "+numero * i);
+        }
+    }
+}
+
+
+
+
+__________________________________________________________________________________
+QUESTAO 4
+import java.util.Scanner;
+
+public class questao4 {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+
+        int numero, positivo = 0, negativo = 0, zero = 0;
+
+        System.out.print("Digite um numero:");
+        numero = scanner.nextInt();
+
+        for(int i = 0; i < 10; i++){
+            System.out.print("Digite um numero:");
+            numero = scanner.nextInt();
+            if(numero> 0){
+                positivo++;
+            } else if(numero <0){
+                negativo++;
+            }else {
+                zero++;
+            }
+
+
+        }
+        System.out.println("Positivo: " +positivo);
+        System.out.println("Negativp: " +negativo);
+        System.out.println("zeros: " +zero);
+
+    }
+}
+
+
