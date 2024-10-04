@@ -1,6 +1,9 @@
+/* Faça um programa, com uma função que necessite de um parâmetro “número”. A função retorna o valor de 
+caractere ‘P’, se seu valor for positivo, e ‘N’, se seu valor for zero ou negativo. */
+
 import java.util.Scanner;
 
-public class Teste {
+public class Questao1 {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
