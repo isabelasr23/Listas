@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Teste {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite um numero: ");
+
+        double numero1 = scanner.nextDouble();
+
+        System.out.print("Esse numero é : ");
+        PostivoOUNegativo(numero1);
+
+    }
+    public static void PostivoOUNegativo(double numero){
+        if (numero < 0){
+            System.out.println("N");
+        }else{
+            System.out.println("P");
+        }
+    }
+}
