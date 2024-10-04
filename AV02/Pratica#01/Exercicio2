@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Teste {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite um numero: ");
+
+        double numero1 = scanner.nextDouble();
+        int digito = 0;
+
+        System.out.print("Esse numero tem : ");
+        System.out.println(Digitos(numero1, digito));
+
+    }
+    public static double Digitos(double numero, int digito ){
+        double divisao = numero/10;
+        digito++;
+        if (divisao < 1){
+            return digito;
+        }else{
+            return Digitos(divisao, digito);
+        }
+    }
+
+}
