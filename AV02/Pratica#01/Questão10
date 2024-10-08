@@ -1,0 +1,38 @@
+/* Crie uma função que receba uma string e retorne o número de palavras na string.*/
+
+import java.util.Scanner;
+
+public class Questao10 {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+
+        String texto;
+
+        System.out.print("Escreva alguma coisa: ");
+        texto = scanner.nextLine();
+
+        contarPalavras(texto);
+
+        int palavras = contarPalavras(texto);
+
+        System.out.println("Existem " +palavras+ " palavras em " +texto);
+
+    }
+
+    public static int contarPalavras(String texto){
+        int quantidadePalavras = 0;
+        texto = texto.toLowerCase();
+
+        String espaco = " ";
+
+        for (int i = 0; i < texto.length(); i++) {
+            char caractere = texto.charAt(i);
+
+            if (espaco.indexOf(caractere) != -1) {
+                quantidadePalavras++;
+            }
+        }
+        return quantidadePalavras;
+    }
+
+}
