@@ -6,12 +6,8 @@ public class Questao10 {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        String texto;
-
         System.out.print("Escreva alguma coisa: ");
-        texto = scanner.nextLine();
-
-        contarPalavras(texto);
+        String texto = scanner.nextLine();
 
         int palavras = contarPalavras(texto);
 
@@ -20,19 +16,11 @@ public class Questao10 {
     }
 
     public static int contarPalavras(String texto){
-        int quantidadePalavras = 0;
-        texto = texto.toLowerCase();
-
-        String espaco = " ";
-
-        for (int i = 0; i < texto.length(); i++) {
-            char caractere = texto.charAt(i);
-
-            if (espaco.indexOf(caractere) != -1) {
-                quantidadePalavras++;
-            }
+        if (texto == null || texto.isEmpty()) {
+            return 0;
         }
-        return quantidadePalavras;
-    }
 
+        String[] palavras = texto.trim().split("\s+");
+        return palavras.length;
+    }
 }
